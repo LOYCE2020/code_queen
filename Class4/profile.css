@@ -1,0 +1,9 @@
+body{
+    background-color: green;
+    text-align: center;
+}
+div{
+    background-color: blue;
+}
+div { text-align: center; }
+ul { display: inline-block; text-align: left; }

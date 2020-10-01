@@ -1,0 +1,115 @@
+
+ body{
+     
+    background-color: #d6d0d0;
+    text-align: center;
+ }
+ h1{
+     font-size: 25px;
+ }
+ p{ 
+    font-family: 'Unna', serif;
+    font-size: 20px;
+    color: #946563;
+ }
+ 
+.intro{
+  
+    display: flex;
+    background-color: #946563;;
+    height: 670px;
+}
+.innerintro{
+    margin: auto;
+}
+
+.intro a{
+    text-decoration: none;
+    padding: 10px;
+    color:#946563;
+    font-size: 25px;
+}
+#greetings{
+    font-size: 40px;
+    color: white;
+}
+#welcome{
+    border-radius: 50px;
+    padding: 2px 0px;
+    border: 1px solid white;
+    box-shadow: 5px 5px 15px white;
+}
+
+.sections{
+    width: 50%;
+    background-color: rgb(243, 235, 235);
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px gray;
+    margin: auto;
+    padding: 10px;
+    margin-top: 30px;
+}
+.sections:hover{
+    box-shadow: 10px 10px 20px gray;
+}
+#formbtn{
+    background-color: #946563;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    font-size: inherit;
+    width: 100px;
+    border: none;
+}
+
+.heading{
+    
+    color: white;
+    display: flex;
+    margin: 30px 0px;
+}
+.innerheading{
+    text-shadow: 4px 4px 4px #aaa;
+    margin: auto;
+    color:#946563;
+}
+
+ .innerheading:hover{
+     background-color:#946563;
+     border-radius: 15px;
+     box-shadow: 5px 5px 10px #946563;
+     padding: 0px 3px;
+     color:white;
+     transition: 2s;
+ }
+
+
+input[type=text], [type=email], [type=submit], [type=search], textarea{
+    width: 250px;
+    text-align: left;
+}
+#photo{
+    width: 130px;
+    height: 150px;
+    border-radius: 50%;
+}
+#contactloy{
+    height: 150px;
+}
+#contactloy a{
+    color: gray;
+ }
+ #contactloy a:hover{
+    color: #946563;
+ }
+ ul{
+    width: 30%;
+     margin: auto;
+     text-align: start;
+     color: #946563;
+ }
+ .loyleftcontact > p{
+    color: #946563;
+ }
+ 
