@@ -1,0 +1,26 @@
+.red {
+    color: red;
+}
+.striped{
+    text-decoration: line-through;
+}
+.yellow {
+    color: yellow;
+}
+.green {
+    color:green;
+}
+.blue {
+    color: blue;
+}
+.cloth{
+    width:40px;
+}
+
+.carltonPhoto{
+    border: 2px solid red; 
+}
+
+img {
+    width: 175px;
+}

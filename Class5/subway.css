@@ -1,0 +1,68 @@
+.red {
+    background-color: red;
+}
+
+.green {
+   background-color: green; 
+}
+.blue {
+   background-color: blue; 
+}
+.orange {
+   background-color: #FF6319; 
+}
+.greeen{
+background-color:#6CBE45;
+}
+.rockway{
+background-color: #996633;
+}
+.CityZone{
+    background-color: #A7A9AC;
+}
+.hempStead{
+    background-color:#FCCC0A;
+}
+.terminalZone{
+    background-color:#808183;
+}
+.belmontBranch{
+    background-color:#B933AD;
+}
+
+ul > li{
+     border-radius: 50%;
+    width: 50px;
+    text-align: center;
+    border: 1px solid black;
+    color:white;
+}
+
+
+
+
+
+
+
+
+/****** DO NOT CHANGE THE STYLES BELOW THIS ******/
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+li {
+    margin: 0;
+    display: inline-block;
+    font-size: 3em;
+    padding: 0.25em;
+}
