@@ -37,7 +37,7 @@ form > input:focus{
     outline: none;
     border-bottom: 2px solid rgba(29,161,242,1.00);
   }
-  button:focus{
+button:focus{
     outline: none;
   }
 input:focus::-webkit-input-placeholder {
@@ -62,9 +62,9 @@ form > button{
     /* text-align: center; */
 }
 .lastSection a{
- text-decoration: none;
- color: rgba(29,161,242,1.00);
- font: inherit;
+    text-decoration: none;
+    color: rgba(29,161,242,1.00);
+    font: inherit;
 }
 .lastSection a:hover{
     text-decoration:underline;
