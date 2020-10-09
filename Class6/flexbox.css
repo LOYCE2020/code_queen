@@ -1,0 +1,35 @@
+.sample1{
+    display:flex;
+    justify-content: center;
+}
+.sample1 > .item{
+    border:1px dotted blue;
+    padding: 5px;
+    margin:5px;
+    color:darkblue;
+    background-color:lightblue;
+}
+
+.sample2{
+    display:flex;
+    justify-content: space-around;
+}
+.sample2 > .item{
+    border:10px double red;
+    border-style: ridge;
+    border-radius:7px;
+    padding: 10px;
+    color:darkred;
+    background-color:pink;
+}
+
+.sample3{
+    display:flex;
+    justify-content: space-between;
+}
+.sample3 > .item{
+    border:1px dashed black;
+    padding: 15px;
+    color:white;
+    background-color:darkgray;
+}
