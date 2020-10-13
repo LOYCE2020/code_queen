@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="actions.css">
+    <title>J-QUERRY ACTIONS</title>
+</head>
+
+<body>
+    <div class="buttons">
+        <button class="hide">Hide</button>
+        <button class="show">Show</button>
+        <button class="toggle">Toggle</button>
+        <button class="slideUp">Slide Up</button>
+        <button class="slideDown">Slide Down</button>
+        <button class="slideToggle">Slide Toggle</button>
+        <button class="fadeOut">Fade Out</button>
+        <button class="fadeIn">Fade In</button>
+        <button class="fadeToggle">Fade Toggle</button>
+    </div>
+    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*"
+        alt="#">
+</body>
+<script>
+    $(".hide").click(function () {
+        $("img").hide();
+    });
+
+    $(".show").click(function () {
+        $("img").show();
+    });
+
+    $(".toggle").click(function () {
+        $("img").toggle();
+    });
+
+    $(".slideUp").click(function () {
+        $("img").slideUp();
+    });
+
+    $(".slideDown").click(function () {
+        $("img").slideDown();
+    });
+
+    $(".slideToggle").click(function () {
+        $("img").slideToggle();
+    });
+
+    $(".fadeOut").click(function () {
+        $("img").fadeOut();
+    });
+
+    $(".fadeIn").click(function () {
+        $("img").fadeIn();
+    });
+
+    $(".fadeToggle").click(function () {
+        $("img").fadeToggle();
+    });
+</script>
+
+</html>
