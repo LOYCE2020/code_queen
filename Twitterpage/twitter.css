@@ -87,11 +87,14 @@ main{
     margin-top: 10px;
      padding: 9px 15px;
      border-radius: 30px;
-     color:  rgba(29,161,242,1.00);
      border: 1px solid rgba(29,161,242,1.00);
-     font-size: 15px;
-     font-weight: bold;
      background-color: transparent;
+}
+#login > a{
+    text-decoration: none;
+    color:  rgba(29,161,242,1.00);
+    font-size: 15px;
+     font-weight: bold;
 }
 #login:focus{
     outline: none;
@@ -156,13 +159,16 @@ main{
 .loginBtn{
     border: 1px solid rgba(29,161,242,1.00);
     width: 100%;
-    color: rgba(29,161,242,1.00);
     background-color: transparent;
     font-weight: bold;
     padding-top: 9.7px; 
     padding-bottom: 9.7px;
-    font-size: 15px;
     border-radius: 30px;
+}
+.loginBtn > a{
+    color: rgba(29,161,242,1.00);
+    font-size: 15px;
+    text-decoration: none;
 }
 .loginBtn:focus{
     outline: none;
