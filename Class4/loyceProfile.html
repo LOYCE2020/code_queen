@@ -5,6 +5,7 @@
     <title>NABASIRYE LOYCE</title>
     <script src="https://kit.fontawesome.com/6416f079ba.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Unna:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="loyceProfile.css">
 </head>
 
@@ -13,12 +14,12 @@
         <!--welcome page-->
         <div class="intro">
             <div class="innerintro">
-                <h1 id="greetings">Hello, I'm #Loyce.<br>I'm a <s>junior</s> web developer.<br>
-                    <button id="welcome"><em><a href="#myskills">View my work!</a></em></button></h1>
+                <h1 id="greetings">Hello, I'm #Loyce.<br>I'm a <s>junior</s> web developer.</h1>
+                    <button id="welcome"><em><a href="#myskills">View my work!</a></em></button>
             </div>
         </div>
         <!-- CAREER -->
-        <div class="sections">
+        <div class="sections hide">
             <div class="heading" id="myskills">
                 <div class="innerheading">
                     <h1><u>INTRODUCTION</u></h1>
@@ -26,7 +27,7 @@
             </div>
             <div class="loymiddleabtbody">
                 <div id="abilities">
-                    <p>I am a junior front end developer with the ability to bring mockups to life, monitor website
+                    <p>I am a <span>junior</span> front end developer with the ability to bring mockups to life, monitor website
                         performance, rectify front-end-related issues, provide guidance and troubleshoot support to
                         clients. I would love to continue learning how to use tech to improve quality of life. </p>
                 </div>
@@ -35,7 +36,7 @@
         </div>
 
         <!--SKILLS-->
-        <div class="sections">
+        <div class="sections hide">
             <div class="heading" id="myskills">
                 <div class="innerheading">
                     <h1><u>SKILLS</u></h1>
@@ -52,7 +53,7 @@
                     </ul>
                 </div>
                 <div class="loylowerabtbody">
-                    <p>I'm a front-end developer <a href="#contact">Lets make something special</a></p>
+                    <p class="formlink">I'm a front-end developer <a href="#contact">Lets make something special</a></p>
                 </div>
             </div>
         </div>
@@ -61,7 +62,7 @@
 
 
         <!--HOBBIES-->
-        <div class="sections">
+        <div class="sections hide">
             <div class="heading" id="blog">
                 <div class="innerheading">
                     <h1><u>HOBBIES</u></h1>
@@ -81,7 +82,7 @@
 
 
         <!--CONTACT-->
-        <div class="sections">
+        <div class="sections contactme">
             <div class="heading" id="contact">
                 <div class="innerheading">
                     <h1><u>CONTACT ME</u></h1>
@@ -91,11 +92,12 @@
             <div class="loylowercontact">
 
                 <div class="loyrightcontact" id="contactloy"><img id="photo" src="loypic.jpg" align="left">
-                    <p>Iam a Kampala based freelancer focused on crafting clean and user friendly websites<br>
+                    <p>I am a Kampala based freelancer focused on crafting clean and user friendly websites<br>
                         <a href="https://www.facebook.com/loyce.nabasirye"><i class="fab fa-facebook fa-2x"></i></a>
                         <a href="https://github.com/LOYCE2020"><i class="fab fa-github fa-2x"></i></a>
                         <a href=""><i class="fab fa-linkedin fa-2x"></i></a>
                     </p>
+                    <p id="sociallinks"></p>
                 </div>
 
                 <div class="loyleftcontact">
@@ -115,5 +117,81 @@
         </div>
     </div>
 </body>
+<script>
+//change the backgrond color and color of home page, display all the sections of my profile in case they are hidden
+    $("#welcome").mouseenter(function(){
+       $(".intro").css("background-color", "#d6d0d0")
+       $("#greetings").fadeOut(2000)
+       $(".hide").show()
+       $(".contactme").css("width", "50%")
+    })
+    //bring back the original home page styling when a user removes the mouse
+    $("#welcome").mouseleave(function(){
+       $(".intro").css("background-color", "#946563")
+       $("#greetings").fadeIn(2000)
+    })
 
+    // display only the home page, contact section and hide other sections when a user clicks on the link
+    $(".formlink").click(function(){
+       $(".contactme").css("width", "90%")
+       $(".hide").slideUp(1000)
+    })
+    //change my photo to another photo when a user hovers over
+    $("#photo").hover(function(){
+       $("img").attr("src", "loypic2.jpg")
+    })
+    //bring back my first photo when a user removes the mouse
+    $("#photo").mouseleave(function(){
+       $("img").attr("src", "loypic.jpg")
+    })
+    //bring back the hidden sections when a user clicks the submit button on the form
+    $("#formbtn").click(function(){
+        $(".hide").slideDown()
+        $(".contactme").css("width", "50%")
+        alert("Message received")
+    })
+    //display a text below the social links when a user hovers over
+    $(".fab").hover(function(){
+        $("#sociallinks").text("Click to view")
+    })
+    //hide the displayed text when a user removes the mouse
+    $(".fab").mouseleave(function(){
+        $("#sociallinks").text("")
+    })
+    //fading out the junior text in the introduction section
+    //styling even list elements 
+    //styling odd list elements
+    $(document).ready(function(){
+        $("p span").css("color", "#d6d0d0")
+        $("ul li:even").css({
+        "background-color":"#946563",
+        "color": "#d6d0d0"
+    })
+    $("ul li:odd").css({
+        "background-color":"#d6d0d0",
+        "color": "#946563"
+    })
+    })
+
+    //styling inputs
+    $("input, textarea").focus(function(){
+        $(this).css({
+            "background-color":"#946563",
+        "color": "white",
+        "padding": "5px"
+        })
+    })
+
+//increase section width on mouse enter
+    $(".sections").mouseenter(function(){
+        $(this).animate({
+            "width":"55%"
+        })
+    })
+//decrease section width on mouse enter
+    $(".sections").mouseleave(function(){
+        $(this).animate({
+            "width":"50%"})
+    })
+</script>
 </html>
