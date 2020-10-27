@@ -36,7 +36,7 @@ border: 10px double black;
     border: 10px double blue;
     margin-left:10px;
     padding:7px;
-    border-style: ridge; /*ridge border is the opposite of 'groove': the border looks as though it were coming out of the canvas. */
+   border-style: ridge; /*ridge border is the opposite of 'groove': the border looks as though it were coming out of the canvas. */
 }
 .answer-seven {
     border: 10px double blue;
