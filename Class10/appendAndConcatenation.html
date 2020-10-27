@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>07.4 Independent Practice: .append() and Concatenation</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="append.css">
+    </head>
+    <body>
+        <h1> College Packing List</h1>
+        <img src="https://www.sportsgiftstore.com/images_products/rochester_institute_of_technology_tigers_house_flag_93397sma.jpg">
+        <div class="main"><br>
+            <input class="to-pack-input">
+            <button class="to-pack-button">Pack this!</button><br><br>
+              <input class="course-unit-input" placeholder="Add course unit">
+            <button class="course-unit-button">Add class!</button>
+        </div>
+        <ul class="packing-list">
+            <li>Hooded Sweatshirt</li>
+
+        </ul>
+        <ol class="course-list">
+        </ol>
+    </body>
+    <script>
+        $(".to-pack-button").click(function(){
+   let listItem= $(".to-pack-input").val();
+    $(".packing-list").append(`<li>I'm going to pack ${listItem}</li>`);
+});
+$(".packing-list").css({
+"background-color":"blue",
+    "color":"white",
+    "font-weight":"bold",
+    "border-radius":"20px"
+});
+$("img").attr({"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT4Ic5z8rksrp_-stNZOpWbH0dPMU8uYBXoEw&usqp=CAU"});
+$(".course-unit-button").click(function(){
+   let courseUnit= $(".course-unit-input").val();
+    $(".course-list").append(`${courseUnit}`);
+});
+$(".packing-list").css({
+"background-color":"blue",
+    "color":"white",
+    "font-weight":"bold",
+    "border-radius":"20px"
+});
+    </script>
+</html>
