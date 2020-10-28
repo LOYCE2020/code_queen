@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My To Do List</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="todo.css">
+    </head>
+    <body>
+    <h2> This Week's To Do List</h2>
+    
+    <h4>
+        New Task: <input class="newToDo">
+        <button class="addNew">Add Task to List</button>
+    </h4>
+    
+    <h3>To Do: <span class="numTasks"></span></h3>
+    <ol class="ToDoList">
+    
+    </ol>
+      <button class="clear">Delete one</button>  
+    </body>
+    <script>
+        let todos=[];
+
+$(".addNew").click(function() {
+    let newTask = $(".newToDo").val();
+   todos.push(newTask);
+    $(".ToDoList").append(`<ol>${newTask}<ol>`);
+   
+    $(".numTasks").text(`You have ${todos.length} tasks`);
+ $('input').val('');
+    
+});
+$(".clear").click(function() {
+    todos.pop();
+    $(".ToDoList").empty();
+    for(let todo of todos){
+        $(".ToDoList").append(`<ol>${todo}<ol>`);
+    }
+    $(".numTasks").text(`You have ${todos.length} tasks`);
+});
+    </script>
+</html>
