@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(184, 181, 181);  
+}
+form{
+    font-size: 18px;
+    background-color: rgb(231, 227, 227);
+    height: 100px;
+    width: 50%;
+    padding: 10px;
+    font-weight: bold;
+    border: 7px double gray;
+    border-style: groove;
+}
+form> input{
+    width: 55%;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+}
+form> input:focus{
+    border-bottom: 3px solid gray;
+}
+.submitbtn{
+    width: 10%;
+    border-radius: 0px 5px 5px 0px;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.submitbtn:hover{
+    background-color: rgb(97, 96, 96);
+}

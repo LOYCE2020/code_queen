@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students grading system</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="gradingsystem.css">
+</head>
+
+<body>
+    <h1>STUDENTS' GRADING SYSTEM</h1>
+    <form>
+        <label for="Please input your results">Please input your results</label>
+        <input autofocus type="text" class="inputResult">
+        <input type="button" class="submitbtn" Value="Submit"><br>
+        <small class="message"></small>
+    </form>
+</body>
+<script>
+    let result = $(".inputResult").val();
+    let grade;
+    $(".submitbtn").click(function () {
+        if (result >= 90 && result <= 100) {
+            grade = "A"
+            $(".message").text(`Your grade is ${grade}.`);
+        } else if (result >= 80 && result <= 89) {
+            grade = "B"
+            $(".message").text(`Your grade is ${grade}.`);
+        } else if (result >= 70 && result <= 79) {
+            grade = "C"
+            $(".message").text(`Your grade is ${grade}.`);
+        } else if (result >= 60 && result <= 69) {
+            grade = "D"
+            $(".message").text(`Your grade is ${grade}.`);
+        } else if (result >= 50 && result <= 59) {
+            grade = "E"
+            $(".message").text(`Your grade is ${grade}.`);
+        } else if (result <= 49 && result >= 0) {
+            grade = "F"
+            $(".message").text(`Your grade is ${grade}.`);
+            $(".message").css("color", "red");
+        } else {
+            $(".message").text("Invalid input");
+            $(".message").css("color", "red");
+        }
+    })
+</script>
+
+</html>
