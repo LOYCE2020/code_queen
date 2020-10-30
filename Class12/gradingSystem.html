@@ -22,22 +22,22 @@
     let result = $(".inputResult").val();
     let grade;
     $(".submitbtn").click(function () {
-        if (result >= 90 && result <= 100) {
+        if (result >= 90 && result <= 100 ) {
             grade = "A"
             $(".message").text(`Your grade is ${grade}.`);
-        } else if (result >= 80 && result <= 89) {
+        } else if (result >= 80 && result <= 89 ) {
             grade = "B"
             $(".message").text(`Your grade is ${grade}.`);
-        } else if (result >= 70 && result <= 79) {
+        } else if (result >= 70 && result <= 79 ) {
             grade = "C"
             $(".message").text(`Your grade is ${grade}.`);
-        } else if (result >= 60 && result <= 69) {
+        } else if (result >= 60 && result <= 69 ) {
             grade = "D"
             $(".message").text(`Your grade is ${grade}.`);
-        } else if (result >= 50 && result <= 59) {
+        } else if (result >= 50 && result <= 59 ) {
             grade = "E"
             $(".message").text(`Your grade is ${grade}.`);
-        } else if (result <= 49 && result >= 0) {
+        } else if (result >= 0 && result <= 49 ) {
             grade = "F"
             $(".message").text(`Your grade is ${grade}.`);
             $(".message").css("color", "red");

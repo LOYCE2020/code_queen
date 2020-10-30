@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>08.3 Compound Conditionals: Code Nation Social Club</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="codenationsocialclub.css">
+    </head>
+    <body>
+        <h1><strong>Code Nation</strong> Social Club</h1>
+        <div class="login">
+            <h3>Log into your account</h3>
+            <p>Username:</p>
+            <input class="username">
+            <p>Password:</p>
+            <input class="password">
+            <button>Login</button>
+            <div class="message"></div>
+        </div>
+    </body>
+    <script>
+        // set the correct username and password combination below
+var correctUsername = "loyce";
+var correctPassword = "echoe1";
+
+
+$("button").click(function() {
+    var username = $(".username").val();
+    var password = $(".password").val();
+    
+    // WRITE YOUR COMPOUND CONDITIONAL BELOW THIS LINE
+       if(username === correctUsername && password === correctPassword ){
+           $(".message").text(`Welcome ${username}`);
+       }else  if(username === "" && password === "" ){
+       $(".message").text(`You cant submit an empty field`);
+       }else  if(username !== correctUsername && password !== correctPassword ){
+           $(".message").text("Invalid username and password");
+       }else  if(username === correctUsername && password !== correctPassword ){
+           $(".message").text("Invalid password");
+       }else  if(username !== correctUsername && password === correctPassword ){
+           $(".message").text("Invalid username");
+       }
+
+
+});
+    </script>
+</html>
