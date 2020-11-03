@@ -69,23 +69,16 @@ const students = [
   },
 ];
 
+
 for (let student of students) {
+const studentObject= document.createElement("div")
+studentObject.classList.add('studentObject')
+  $(studentObject).append("<div class='studentTittle'>" + student.name + "<br>" + "Age: " + student.age +"<br>" +"</div>");
+  for (let subject of student.subjects) {
+   
+    $(studentObject).append("<div class='studentBody'>"+"<b>"+subject.name+":</b> "+subject.score+"</div>")
+    $("#student-list").append(studentObject)
 
-  $("#student-list").append("<div class='studentDiv'>" + student.name + "<br>" + "Age: " + student.age + "<br>"  +student.subjects[0].name+": "+student.subjects[0].score+"<br>"+ student.subjects[1].name+": "+student.subjects[1].score+"</div>");
-
+  }
 
 }
-
-
-
-// for (let student of students) {
-
-//   $("#student-list").append("<div class='studentDiv'>" + student.name + "<br>" + "Age: " + student.age + "<br>"  +student.subjects[0].name+"<br>"+ student.subjects[1].name+"</div>");
-//  $(".studentDiv")
-//   for (let subject of student.subjects) {
-   
-//     $(".studentDiv").append("<div>"+subject.name+"</div>")
-
-//   }
-
-// }
