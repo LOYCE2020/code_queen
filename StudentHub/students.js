@@ -5,35 +5,26 @@ const age=document.getElementById('age')
 const submitBtn=document.getElementById('submit-btn')
 const signUpForm=document.getElementById('userform')
 const errorMessage=document.getElementById('error-msg')
+const table=document.getElementById('tableresult')
+var form = document.getElementById('userform');
 
-const students=[ {
-    userid:"1",
-    fname:"bubble",
-    lname:"Wacy",
-    email:"bubble@gmail.com",
-    age:7
-}, {
-    userid:"2",
-    fname:"Ways",
-    lname:"Mary",
-    email:"mary@gmail.com",
-    age:10
-},{
-    userid:"3",
-    fname:"Nabasirye",
-    lname:"Loyce",
-    email:"loyce@gmail.com",
-    age:14
-}];
-let studentObject;
-for(let student in students) {
-    studentObject += `<tr>`;
-    for(let eachStudent in students[student]) {
-        studentObject += `<td>${students[student][eachStudent]}</td>`;
+var studentsArray=[];
+
+function localStorageLoad(){
+    if(localStorage.studentsResult){
+        studentsArray=JSON.parse(localStorage.studentsResult)
+        let studentObject = "";
+        for(let student in studentsArray) {
+            studentObject += `<tr>`;
+            for(let eachStudentElement in studentsArray[student]) {
+                studentObject += `<td>${studentsArray[student][eachStudentElement]}</td>`;
+            }
+            studentObject += `</tr>`;
+        }
+         table.innerHTML = studentObject;
     }
-    studentObject += `</tr>`;
 }
-document.getElementById('tableresult').innerHTML = studentObject;
+
 submitBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     const firstNameInput=firstName.value;
@@ -41,44 +32,15 @@ submitBtn.addEventListener('click', (e)=>{
     const emailInput=email.value;
     const ageInput=age.value;
     if(firstNameInput=="" ||lastNameInput=="" ||emailInput==""|| ageInput==""){
-        
-        errorMessage.style.visibility="visible"
-        submitBtn.style.color="rgb(167, 64, 64)"
-        
-   }else{
-       
-    const newStudent={
-        userid:students.length+1,
-        fname:firstNameInput,
-        lname:lastNameInput,
-        email:emailInput,
-        age:ageInput
+        errorMessage.innerText='You can not submit an empty field!!!';
+        setTimeout(() => {   
+            errorMessage.innerHTML=' ';
+        }, 3000);       
+    }else{  
+        const newStudent={userid:studentsArray.length+1, fname:firstNameInput, lname:lastNameInput, email:emailInput, age:ageInput};
+        studentsArray.push(newStudent);
+        localStorage.studentsResult=JSON.stringify(studentsArray);
+        signUpForm.reset();
+        localStorageLoad(studentObject)
     }
-    students.push(newStudent)
-    const table=document.getElementById('tableresult')
-
-    var studentObject = "";
-    for(let student in students) {
-        studentObject += `<tr>`;
-        for(let eachStudent in students[student]) {
-            studentObject += `<td>${students[student][eachStudent]}</td>`;
-        }
-        studentObject += `</tr>`;
-    }
-    table.innerHTML = studentObject;
-    signUpForm.reset();
-
-}
-
 })
-
-const clearError=document.getElementById('fname')
-clearError.addEventListener("click",()=>{
-    errorMessage.style.visibility="hidden"
-    submitBtn.style.color="white"
-})
-
-
-
-
-

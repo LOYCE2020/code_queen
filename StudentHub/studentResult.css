@@ -25,6 +25,9 @@ img{
     margin-left: 10px;
     cursor: context-menu;
 }
+.logo:hover{
+    color: rgb(173, 187, 212);
+}
 nav>.links{
     width: 26%;
     margin-top: 10px;
@@ -37,11 +40,15 @@ nav>.links>ul{
 }
 nav>.links>ul>li{
 list-style: none;
+font-size: 17px;
+cursor: pointer;
 }
 nav>.links>ul>li>a{
     text-decoration: none;
-    color: white;
-    font-size: 17px;
+    color: whitesmoke;
+}
+nav>.links>ul>li>a:hover{
+    color: rgb(173, 187, 212);
 }
 /* Student form */
 #register-student-title{
@@ -66,7 +73,6 @@ form{
 }
 small{
     color: rgb(167, 64, 64);
-    visibility: hidden;
 }
 
 /* student results */
@@ -74,6 +80,4 @@ small{
   width: 50%;
   background-color: rgba(176, 181, 185, 0.7);
   border: 2px solid  white;
-  
 }
-
